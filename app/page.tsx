@@ -32,12 +32,7 @@ export default function Page() {
     },
   ];
 
-  const sectors = [
-    "Salud",
-    "Alimentos y bebidas",
-    "Farmacéutico",
-    "Industria",
-  ];
+  const sectors = ["Salud", "Alimentos y bebidas", "Farmacéutico", "Industria"];
 
   const sectorDescriptions: Record<string, string> = {
     Salud:
@@ -58,15 +53,59 @@ export default function Page() {
     "Soluciones llave en mano: diseño, fabricación, instalación y optimización.",
   ];
 
+  const applications = [
+    "Unidades renales y clínicas",
+    "Plantas de alimentos y bebidas",
+    "Procesos industriales críticos",
+    "Sistemas farmacéuticos",
+  ];
+
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
+      {/* NAVBAR */}
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <a href="#" className="flex items-center gap-3">
+            <img src="/corex.jpg" alt="Corex Systems" className="h-10 w-auto rounded" />
+            <span className="font-black text-white">Corex Systems</span>
+          </a>
+
+          <nav className="hidden gap-8 text-sm font-semibold text-slate-200 md:flex">
+            <a href="#" className="hover:text-white">
+              Inicio
+            </a>
+            <a href="#sectores" className="hover:text-white">
+              Sectores
+            </a>
+            <a href="#servicios" className="hover:text-white">
+              Servicios
+            </a>
+            <a href="#aplicaciones" className="hover:text-white">
+              Aplicaciones
+            </a>
+            <a href="#contacto" className="hover:text-white">
+              Contacto
+            </a>
+          </nav>
+
+          <a
+            href="https://wa.me/573148835602"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full bg-teal-400 px-5 py-2 text-sm font-bold text-slate-900 hover:bg-teal-300"
+          >
+            Contactar
+          </a>
+        </div>
+      </header>
+
       {/* HERO */}
       <section className="relative overflow-hidden bg-slate-950 text-white">
         <div className="absolute inset-0">
           <img
             src="/corex.jpg"
             alt="Corex Systems tratamiento de agua"
-            className="h-full w-full object-cover opacity-35"
+            className="h-full w-full scale-105 object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/90 to-teal-900/80" />
         </div>
@@ -85,18 +124,19 @@ export default function Page() {
               Soluciones integrales de tratamiento de agua, ósmosis inversa y control
               para sectores donde la continuidad operativa es vital.
             </p>
-<p className="mt-4 text-sm font-semibold text-teal-200">
-  Especialistas en sistemas de agua para procesos donde detenerse no es opción.
-</p>
+
+            <p className="mt-4 text-sm font-semibold text-teal-200">
+              Especialistas en sistemas de agua para procesos donde detenerse no es opción.
+            </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
-                href="https://wa.me/573148835602?text=Hola%20Corex%20Systems,%20quiero%20una%20cotizacion."
+                href="https://wa.me/573148835602"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-full bg-teal-300 px-8 py-4 text-center font-bold text-slate-950 shadow-xl transition hover:bg-teal-200"
               >
-                Habla con un ingeniero experto
+                Hablar con un ingeniero
               </a>
 
               <a
@@ -134,14 +174,14 @@ export default function Page() {
       </section>
 
       {/* SECTORES */}
-      <section className="mx-auto max-w-7xl px-6 py-16">
+      <section id="sectores" className="mx-auto max-w-7xl px-6 py-16">
         <div className="mb-8 max-w-3xl">
           <h2 className="text-3xl font-black md:text-4xl">
             Soluciones para sectores críticos
           </h2>
           <p className="mt-4 text-slate-600">
-            Acompañamos procesos donde la calidad del agua, la trazabilidad y
-            la continuidad operativa son esenciales.
+            Acompañamos procesos donde la calidad del agua, la trazabilidad y la continuidad
+            operativa son esenciales.
           </p>
         </div>
 
@@ -161,15 +201,15 @@ export default function Page() {
       </section>
 
       {/* SERVICIOS */}
-      <section className="bg-white">
+      <section id="servicios" className="bg-white">
         <div className="mx-auto max-w-7xl px-6 py-16">
           <div className="mb-10 max-w-3xl">
             <h2 className="text-3xl font-black md:text-4xl">
               Productos y servicios Corex
             </h2>
             <p className="mt-4 text-slate-600">
-              Diseño, fabricación, instalación, mantenimiento y suministro
-              técnico especializado para sistemas de agua críticos.
+              Diseño, fabricación, instalación, mantenimiento y suministro técnico
+              especializado para sistemas de agua críticos.
             </p>
           </div>
 
@@ -197,41 +237,35 @@ export default function Page() {
           </div>
         </div>
       </section>
-{/* APLICACIONES */}
-<section className="bg-slate-50">
-  <div className="mx-auto max-w-7xl px-6 py-16">
-    <div className="mb-10 max-w-3xl">
-      <h2 className="text-3xl font-black md:text-4xl">
-        Aplicaciones Corex
-      </h2>
-      <p className="mt-4 text-slate-600">
-        Soluciones diseñadas para operaciones que requieren calidad de agua,
-        continuidad, trazabilidad y soporte técnico especializado.
-      </p>
-    </div>
 
-    <div className="grid gap-6 md:grid-cols-4">
-      {[
-        "Unidades renales y clínicas",
-        "Plantas de alimentos y bebidas",
-        "Procesos industriales críticos",
-        "Sistemas farmacéuticos",
-      ].map((item) => (
-        <div
-          key={item}
-          className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-xl"
-        >
-          <div className="mb-4 h-2 w-12 rounded-full bg-teal-400" />
-          <h3 className="text-lg font-black text-slate-900">{item}</h3>
-          <p className="mt-3 text-sm leading-6 text-slate-600">
-            Ingeniería, suministro, instalación y soporte para operación segura
-            y eficiente.
-          </p>
+      {/* APLICACIONES */}
+      <section id="aplicaciones" className="bg-slate-50">
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          <div className="mb-10 max-w-3xl">
+            <h2 className="text-3xl font-black md:text-4xl">Aplicaciones Corex</h2>
+            <p className="mt-4 text-slate-600">
+              Soluciones diseñadas para operaciones que requieren calidad de agua,
+              continuidad, trazabilidad y soporte técnico especializado.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-4">
+            {applications.map((item) => (
+              <div
+                key={item}
+                className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-xl"
+              >
+                <div className="mb-4 h-2 w-12 rounded-full bg-teal-400" />
+                <h3 className="text-lg font-black text-slate-900">{item}</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                  Ingeniería, suministro, instalación y soporte para operación segura
+                  y eficiente.
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* POR QUE COREX */}
       <section className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center">
@@ -245,9 +279,9 @@ export default function Page() {
           </h2>
 
           <p className="mt-5 text-slate-600">
-            Integramos tecnología, instrumentación, repuestos, consumibles y
-            soporte técnico para reducir paradas, mejorar la calidad del agua y
-            garantizar continuidad en procesos exigentes.
+            Integramos tecnología, instrumentación, repuestos, consumibles y soporte técnico
+            para reducir paradas, mejorar la calidad del agua y garantizar continuidad en
+            procesos exigentes.
           </p>
 
           <ul className="mt-7 space-y-4">
@@ -270,16 +304,14 @@ export default function Page() {
       </section>
 
       {/* CTA */}
-      <section className="bg-slate-950 px-6 py-20 text-white">
+      <section id="contacto" className="bg-slate-950 px-6 py-20 text-white">
         <div className="mx-auto max-w-7xl rounded-[2rem] bg-gradient-to-r from-sky-900 to-teal-700 p-10 shadow-2xl md:p-14">
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div>
-              <h2 className="text-3xl font-black md:text-4xl">
-                Hablemos de tu proyecto
-              </h2>
+              <h2 className="text-3xl font-black md:text-4xl">Hablemos de tu proyecto</h2>
               <p className="mt-4 max-w-2xl text-slate-100">
-                Cotización rápida, diagnóstico técnico y suministro de repuestos
-                críticos para sistemas de tratamiento de agua.
+                Cotización rápida, diagnóstico técnico y suministro de repuestos críticos
+                para sistemas de tratamiento de agua.
               </p>
             </div>
 
@@ -311,7 +343,7 @@ export default function Page() {
         rel="noreferrer"
         className="fixed bottom-6 right-6 z-50 rounded-full bg-teal-400 px-6 py-4 font-black text-slate-950 shadow-2xl transition hover:bg-teal-300"
       >
-        WhatsApp
+        Asesoría inmediata
       </a>
 
       {/* FOOTER */}
