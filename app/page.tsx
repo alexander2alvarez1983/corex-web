@@ -39,6 +39,17 @@ export default function Page() {
     "Industria",
   ];
 
+  const sectorDescriptions: Record<string, string> = {
+    Salud:
+      "Soluciones de agua para cumplimiento normativo en salud, garantizando calidad, continuidad y seguridad en procesos críticos como hemodiálisis y esterilización.",
+    "Alimentos y bebidas":
+      "Optimización de calidad de agua para procesos productivos, asegurando inocuidad, estabilidad y eficiencia en líneas de producción.",
+    Farmacéutico:
+      "Control de agua de alta pureza para procesos farmacéuticos, con enfoque en trazabilidad, cumplimiento y control microbiológico.",
+    Industria:
+      "Ingeniería de sistemas de tratamiento de agua para operación continua, protección de equipos y eficiencia en procesos industriales.",
+  };
+
   const benefits = [
     "Ingeniería para procesos donde fallar no es una opción.",
     "Integración de instrumentación, control y monitoreo.",
@@ -66,14 +77,15 @@ export default function Page() {
               COREX SYSTEMS S.A.S.
             </div>
 
-<h1 className="text-4xl font-black tracking-tight md:text-6xl">
-  Ingeniería de alta confiabilidad para procesos críticos
-</h1>
+            <h1 className="text-4xl font-black tracking-tight md:text-6xl">
+              Ingeniería de alta confiabilidad para procesos críticos
+            </h1>
 
-<p className="mt-6 max-w-2xl text-lg leading-8 text-slate-100 md:text-xl">
-  Soluciones integrales de tratamiento de agua, ósmosis inversa y control
-  para sectores donde la continuidad operativa es vital.
-</p>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-100 md:text-xl">
+              Soluciones integrales de tratamiento de agua, ósmosis inversa y control
+              para sectores donde la continuidad operativa es vital.
+            </p>
+
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
                 href="https://wa.me/573148835602?text=Hola%20Corex%20Systems,%20quiero%20una%20cotizacion."
@@ -137,8 +149,8 @@ export default function Page() {
               className="rounded-3xl bg-white p-6 text-center shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-xl"
             >
               <h3 className="font-black text-slate-900">{sector}</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Agua, control y soporte para operación segura.
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                {sectorDescriptions[sector]}
               </p>
             </div>
           ))}
