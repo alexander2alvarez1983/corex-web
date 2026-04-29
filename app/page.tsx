@@ -85,6 +85,9 @@ export default function Page() {
               Soluciones integrales de tratamiento de agua, ósmosis inversa y control
               para sectores donde la continuidad operativa es vital.
             </p>
+<p className="mt-4 text-sm font-semibold text-teal-200">
+  Especialistas en sistemas de agua para procesos donde detenerse no es opción.
+</p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
@@ -93,7 +96,7 @@ export default function Page() {
                 rel="noreferrer"
                 className="rounded-full bg-teal-300 px-8 py-4 text-center font-bold text-slate-950 shadow-xl transition hover:bg-teal-200"
               >
-                Solicitar cotización
+                Habla con un ingeniero experto
               </a>
 
               <a
@@ -194,6 +197,41 @@ export default function Page() {
           </div>
         </div>
       </section>
+{/* APLICACIONES */}
+<section className="bg-slate-50">
+  <div className="mx-auto max-w-7xl px-6 py-16">
+    <div className="mb-10 max-w-3xl">
+      <h2 className="text-3xl font-black md:text-4xl">
+        Aplicaciones Corex
+      </h2>
+      <p className="mt-4 text-slate-600">
+        Soluciones diseñadas para operaciones que requieren calidad de agua,
+        continuidad, trazabilidad y soporte técnico especializado.
+      </p>
+    </div>
+
+    <div className="grid gap-6 md:grid-cols-4">
+      {[
+        "Unidades renales y clínicas",
+        "Plantas de alimentos y bebidas",
+        "Procesos industriales críticos",
+        "Sistemas farmacéuticos",
+      ].map((item) => (
+        <div
+          key={item}
+          className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div className="mb-4 h-2 w-12 rounded-full bg-teal-400" />
+          <h3 className="text-lg font-black text-slate-900">{item}</h3>
+          <p className="mt-3 text-sm leading-6 text-slate-600">
+            Ingeniería, suministro, instalación y soporte para operación segura
+            y eficiente.
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* POR QUE COREX */}
       <section className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center">
