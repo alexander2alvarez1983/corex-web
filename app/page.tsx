@@ -53,7 +53,7 @@ export default function Page() {
       <section className="relative overflow-hidden bg-slate-950 text-white">
         <div className="absolute inset-0">
           <img
-            src="/corex"
+            src="/corex.jpg"
             alt="Corex Systems tratamiento de agua"
             className="h-full w-full object-cover opacity-35"
           />
