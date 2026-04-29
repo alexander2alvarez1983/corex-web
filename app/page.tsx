@@ -66,16 +66,14 @@ export default function Page() {
               COREX SYSTEMS S.A.S.
             </div>
 
-            <h1 className="text-4xl font-black tracking-tight md:text-6xl">
-              Ingeniería confiable para procesos que no admiten errores
-            </h1>
+<h1 className="text-4xl font-black tracking-tight md:text-6xl">
+  Ingeniería de alta confiabilidad para procesos críticos
+</h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-100 md:text-xl">
-              Medimos, filtramos y energizamos el futuro con soluciones
-              integrales de tratamiento de agua, ósmosis inversa, filtración
-              crítica, instrumentación, control y soporte técnico.
-            </p>
-
+<p className="mt-6 max-w-2xl text-lg leading-8 text-slate-100 md:text-xl">
+  Soluciones integrales de tratamiento de agua, ósmosis inversa y control
+  para sectores donde la continuidad operativa es vital.
+</p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
                 href="https://wa.me/573148835602?text=Hola%20Corex%20Systems,%20quiero%20una%20cotizacion."
