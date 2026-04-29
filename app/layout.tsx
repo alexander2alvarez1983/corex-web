@@ -13,11 +13,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Corex Systems | Tratamiento de agua y ósmosis inversa",
+  title: "Corex Systems | Tratamiento de agua y ósmosis inversa en Colombia",
   description:
-    "Soluciones integrales en tratamiento de agua, ósmosis inversa, filtración crítica, instrumentación y control para salud, industria, alimentos y farmacéutico en Colombia.",
+    "Corex Systems S.A.S. ofrece soluciones en tratamiento de agua, ósmosis inversa, filtración crítica, instrumentación y control para sector salud, industrial, alimentos y farmacéutico en Colombia.",
+  keywords: [
+    "tratamiento de agua Colombia",
+    "osmosis inversa Medellin",
+    "plantas de agua industrial",
+    "tratamiento agua hemodialisis",
+    "filtracion critica",
+    "Corex Systems",
+  ],
+  authors: [{ name: "Corex Systems S.A.S." }],
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
